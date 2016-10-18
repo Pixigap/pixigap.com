@@ -5,10 +5,9 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
     secret_access_key: $AWS_SECRET_KEY
     bucket: pixigap.com
-    endpoint: pixigap.com.s3-website-us-west-2.amazonaws.com
+    endpoint: staging.pixigap.com.s3-website-us-west-2.amazonaws.com
     region: us-west-2
     skip_cleanup: true
-    acl: public_read
     detect_encoding: true
 notifications:
     email:
