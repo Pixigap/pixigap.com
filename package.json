@@ -1,0 +1,19 @@
+{
+  "name": "pixigap.com",
+  "version": "1.0.0",
+  "description": "Build Scripts for pixigap website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo no tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pixigap/pixigap.com.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Pixigap/pixigap.com/issues"
+  },
+  "homepage": "https://github.com/Pixigap/pixigap.com#readme"
+}
