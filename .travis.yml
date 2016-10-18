@@ -4,8 +4,7 @@ deploy:
     provider: s3
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
     secret_access_key: $AWS_SECRET_KEY
-    bucket: pixigap.com
-    endpoint: staging.pixigap.com.s3-website-us-west-2.amazonaws.com
+    bucket: staging.pixigap.com
     region: us-west-2
     skip_cleanup: true
     detect_encoding: true
