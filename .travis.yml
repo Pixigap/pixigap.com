@@ -8,6 +8,8 @@ deploy:
     region: us-west-2
     skip_cleanup: true
     detect_encoding: true
+    on:
+        branch: master
 notifications:
     email:
         on_failure: always
