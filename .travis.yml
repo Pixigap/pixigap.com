@@ -3,7 +3,7 @@ node_js: node
 cache: pip
 script:
   - sudo pip install s3cmd
-  - s3cmd sync --delete-removed --region=us-west-2 -P -M -r . s3://staging.pixigap.com/
+  - s3cmd sync --access_key=${$AWS_ACCESS_KEY} --secret_key=${$AWS_SECRET_KEY} --delete-removed --region=us-west-2 -P -M -r . s3://staging.pixigap.com/
 notifications:
     email:
         on_failure: always
