@@ -6,7 +6,7 @@ branches:
   - master
 script:
   - sudo -H pip install s3cmd python-magic
-  - $TRAVIS_BRANCH == "master" && s3cmd sync --no-progress --access_key=$AWS_ACCESS_KEY --secret_key=$AWS_SECRET_KEY --delete-removed --region=us-west-2 -P -M --exclude='.git/*' -r . s3://pixigap.com/
+  - s3cmd sync --no-progress --access_key=$AWS_ACCESS_KEY --secret_key=$AWS_SECRET_KEY --delete-removed --region=us-west-2 -P -M --exclude='.git/*' -r . s3://pixigap.com/
 notifications:
     email:
         on_failure: always
