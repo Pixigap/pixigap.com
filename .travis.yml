@@ -1,15 +1,9 @@
 language: node_js
 node_js: node
-deploy:
-    provider: s3
-    access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
-    secret_access_key: $AWS_SECRET_KEY
-    bucket: staging.pixigap.com
-    region: us-west-2
-    skip_cleanup: true
-    detect_encoding: true
-    on:
-        branch: master
+cache: pip
+script:
+  - sudo pip install s3cmd
+  - s3cmd sync --delete-removed --region=us-west-2 -P -M -r . s3://staging.pixigap.com/
 notifications:
     email:
         on_failure: always
